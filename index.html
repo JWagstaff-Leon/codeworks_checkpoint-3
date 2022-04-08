@@ -8,35 +8,49 @@
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
-  <title>w3d5</title>
+  <title>Taskmaster</title>
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">w3d5</span>
-      </a>
+<header>
+    <nav class="navbar navbar-dark navbar-expand bg-transparent text-dark no-select">
+        <span class="ms-2 fs-3">Taskmaster</span>
     </nav>
-  </header>
-  <main>
+</header>
+<main>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+        <div class="row">
+            <div class="col-4">
+                <div>
+                    <form onsubmit="app.listsController.createList()" class="row mb-3">
+                        <div class="col-6">
+                            <label for="name" class="form-label visually-hidden">New List Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="New List Name" />
+                        </div>
+                        <div class="col-3">
+                            <label for="color" class="form-label visually-hidden">New List Color</label>
+                            <input type="color" class="rounded ms-2" id="color" name="color" value="#A0A0A0"/>
+                        </div>
+                        <div class="col-3">
+                            <button type="submit" class="btn btn-secondary">Create List</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="row pt-5 justify-content-center flex-nowrap" id="lists">
+            <!-- lists will go here as a col>div.mx-10? -->
+            
+            <!-- end eher -->
+        </div>
     </div>
-  </main>
-  <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p><small>Made with 💖 by Codeworks</small></p>
-    </div>
-  </footer>
+</main>
+<footer>
+    <!-- intentionally empty -->
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
