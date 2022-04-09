@@ -3,6 +3,7 @@ import { List } from "../Models/List.js";
 import { Task } from "../Models/Task.js";
 import { listsService } from "../Services/ListsService.js";
 import { tasksService } from "../Services/TasksService.js";
+import { Pop } from "../Utils/Pop.js";
 
 function _loadState()
 {
@@ -91,12 +92,24 @@ export class ListsController
         }
     }
     
-    deleteList(listId)
+    async deleteList(listId)
     {
         try
         {
-            tasksService.deleteTaskByListId(listId);
-            listsService.deleteListById(listId);
+            const deleteTask = await Swal.fire({
+                title: "Delete List?",
+                text: "This cannot be undone.",
+                icon: "warning",
+                showCancelButton: true,
+                cancelButtonColor: '#cbcbcb',
+                confirmButtonColor: '#d33',
+                confirmButtonText: "Delete"
+              })
+            if(deleteTask.isConfirmed)
+            {
+                tasksService.deleteTaskByListId(listId);
+                listsService.deleteListById(listId);
+            }
         }
         catch(error)
         {
@@ -126,11 +139,23 @@ export class ListsController
         }
     }
     
-    deleteTask(taskId)
+    async deleteTask(taskId)
     {
         try
         {
-            tasksService.deleteTaskById(taskId);
+            const deleteTask = await Swal.fire({
+                title: "Delete Task?",
+                text: "This cannot be undone.",
+                icon: "warning",
+                showCancelButton: true,
+                cancelButtonColor: '#cbcbcb',
+                confirmButtonColor: '#d33',
+                confirmButtonText: "Delete"
+              })
+            if(deleteTask.isConfirmed)
+            {
+                tasksService.deleteTaskById(taskId);
+            }
         }
         catch(error)
         {
