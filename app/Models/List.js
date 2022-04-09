@@ -26,7 +26,7 @@ export class List
                     <i class="mdi mdi-delete-forever text-danger on-hover action mdi-24px" style="position: absolute; right: 5px; top: 0px" title="Delete List" onclick="app.listsController.deleteList('${this.id}')"></i>
                     <div class="rounded-top d-flex align-items-center justify-content-center flex-column" style="background-color: ${this.color}; height: 20%;">
                         <h2>${this.name}</h2>
-                        <h6>${tasksDone}/${tasks} tasks done</h6>
+                        <h6>${tasksDone === tasks ? "All" : tasksDone + "/" + tasks} tasks done</h6>
                     </div>
                     <div id="${this.id}-tasks" class="mt-1 ps-2 flex-grow-1"></div>
                     <div>

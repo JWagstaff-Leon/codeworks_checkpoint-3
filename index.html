@@ -16,7 +16,7 @@
 
 <body>
 <header>
-    <nav class="navbar navbar-dark navbar-expand bg-transparent text-dark no-select">
+    <nav class="navbar navbar-dark navbar-expand bg-transparent text-dark no-select d-flex justify-content-center">
         <span class="ms-2 fs-3">Taskmaster</span>
     </nav>
 </header>
@@ -25,6 +25,7 @@
         <div class="row">
             <div class="col-4">
                 <div>
+                    <h3>Add List</h3>
                     <form onsubmit="app.listsController.createList()" class="row mb-3">
                         <div class="col-6">
                             <label for="name" class="form-label visually-hidden">New List Name</label>
@@ -42,7 +43,7 @@
             </div>
         </div>
     </div>
-    <div class="flex-grow-1 lists-container">
+    <div class="flex-grow-1 lists-container mx-auto">
 
         <div class="d-flex pt-5" id="lists">
             <!-- lists will go here as a col>div.mx-10? -->

@@ -14127,7 +14127,6 @@ input[type=color] {
 
 #lists [id$=-tasks] {
   overflow-y: scroll;
-  overflow-x: visible;
   overflow-wrap: anywhere;
 }
 
