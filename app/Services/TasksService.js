@@ -11,7 +11,6 @@ class TasksService
 
     deleteTaskById(taskId)
     {
-        console.log("deleting task with id of", taskId)
         ProxyState.tasks = ProxyState.tasks.filter(task => task.id != taskId);
     }
 
