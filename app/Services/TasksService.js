@@ -19,6 +19,16 @@ class TasksService
     {
         ProxyState.tasks = ProxyState.tasks.filter(task => task.listId != listId);
     }
+
+    toggleTask(taskId)
+    {
+        const foundTask = ProxyState.tasks.find(task => task.id === taskId);
+        if(foundTask)
+        {
+            foundTask.checked = !foundTask.checked;
+            ProxyState.tasks = ProxyState.tasks;
+        }
+    }
 }
 
 export const tasksService = new TasksService();
