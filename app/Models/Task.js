@@ -22,21 +22,25 @@ export class Task
 
     get Template()
     {
-        const iconClass = this.checked ? "mdi mdi-checkbox-marked" : "mdi mdi-checkbox-blank-outline";
-        const textStyle = this.checked ? "text-decoration: strikethrough; " : ""
+        const iconClass = this.checked ? "mdi mdi-24px mdi-checkbox-marked-circle" : "mdi mdi-24px mdi-circle-outline";
+        const textStyle = this.checked ? "text-decoration: line-through; " : ""
         
         const parentList = ProxyState.lists.find(list => list.id === this.listId);
         
-        if(parentList)
+        if(!parentList)
         {
-            const iconStyle = `color: ${parentList.color};`;
+            throw new Error("Task is missing a parent List.")
         }
+
+        const iconStyle = `color: ${parentList.color};`;
 
         return `
             <div class="d-flex align-items-center">
-                <i class="${iconClass} me-2" style="iconStyle" onclick="app.listsController.toggleTask('${this.id}')"></i>
-                <span class="me-auto">${this.name}</span>
-                <i class="mdi mdi-18px action mdi-delete-forever on-hover text-danger ms-2" onclick="app.listsController.deleteTask('${this.id}')"></i>
+                <div onclick="app.listsController.toggleTask('${this.id}')" class="d-flex align-items-center flex-grow-1 selectable no-select">
+                    <i class="${iconClass} me-2" style="${iconStyle} filter: drop-shadow(4px 4px 0.8px rgba(0, 0, 0, 0.3));"></i>
+                    <span style="${textStyle}">${this.name}</span>
+                </div>
+                <i class="mdi mdi-24px action mdi-delete-forever on-hover text-danger ms-2" onclick="app.listsController.deleteTask('${this.id}')"></i>
             </div>
         `;
     }

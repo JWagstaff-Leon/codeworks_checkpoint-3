@@ -137,4 +137,16 @@ export class ListsController
             console.error("[DELETE TASK ERROR]", error.message);
         }
     }
+
+    toggleTask(taskId)
+    {
+        try
+        {
+            tasksService.toggleTask(taskId);
+        }
+        catch(error)
+        {
+            console.log("[TOGGLE TASK ERROR]", error.message);
+        }
+    }
 }
