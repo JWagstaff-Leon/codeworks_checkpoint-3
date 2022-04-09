@@ -20,7 +20,7 @@
         <span class="ms-2 fs-3">Taskmaster</span>
     </nav>
 </header>
-<main>
+<main class="d-flex flex-column">
     <div class="container-fluid">
         <div class="row">
             <div class="col-4">
@@ -28,20 +28,23 @@
                     <form onsubmit="app.listsController.createList()" class="row mb-3">
                         <div class="col-6">
                             <label for="name" class="form-label visually-hidden">New List Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="New List Name" />
+                            <input type="text" class="form-control" id="name" name="name" placeholder="New List Name" minlength="3" maxlength="15" required />
                         </div>
                         <div class="col-3">
                             <label for="color" class="form-label visually-hidden">New List Color</label>
                             <input type="color" class="rounded ms-2" id="color" name="color" value="#A0A0A0"/>
                         </div>
                         <div class="col-3">
-                            <button type="submit" class="btn btn-secondary">Create List</button>
+                            <button type="submit" class="btn bg-grey">Create List</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="row pt-5 justify-content-center flex-nowrap" id="lists">
+    </div>
+    <div class="flex-grow-1 lists-container">
+
+        <div class="d-flex pt-5" id="lists">
             <!-- lists will go here as a col>div.mx-10? -->
             
             <!-- end eher -->

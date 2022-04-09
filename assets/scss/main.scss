@@ -26,15 +26,14 @@ input[type="color"]
 
 }
 
-#lists
+.lists-container
 {
     overflow-x: scroll;
-    background-color: transparent;
-    scrollbar-color: transparent transparent;
+    scrollbar-color: rgb(165, 167, 178) transparent;
 }
-#lists::-webkit-scrollbar
+.lists-container::-webkit-scrollbar
 {
-    color: transparent
+    color: rgb(165, 167, 178);
 }
 
 #lists>div>div
@@ -42,9 +41,17 @@ input[type="color"]
     height: 70vh;
     width: 25vw;
     background-color: whitesmoke;
+    border: 2px solid black;
 }
 
 #lists [id$="-tasks"]
 {
     overflow-y: scroll;
+    overflow-x: visible;
+    overflow-wrap: anywhere;
+}
+
+#lists [id$="-tasks"] span
+{
+    text-overflow: ellipsis;
 }

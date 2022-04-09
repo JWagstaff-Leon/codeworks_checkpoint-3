@@ -14109,24 +14109,30 @@ input[type=color] {
   width: 100%;
 }
 
-#lists {
+.lists-container {
   overflow-x: scroll;
-  background-color: transparent;
-  scrollbar-color: transparent transparent;
+  scrollbar-color: #a5a7b2 transparent;
 }
 
-#lists::-webkit-scrollbar {
-  color: transparent;
+.lists-container::-webkit-scrollbar {
+  color: #a5a7b2;
 }
 
 #lists > div > div {
   height: 70vh;
   width: 25vw;
   background-color: whitesmoke;
+  border: 2px solid black;
 }
 
 #lists [id$=-tasks] {
   overflow-y: scroll;
+  overflow-x: visible;
+  overflow-wrap: anywhere;
+}
+
+#lists [id$=-tasks] span {
+  text-overflow: ellipsis;
 }
 
 /*# sourceMappingURL=main.css.map */
