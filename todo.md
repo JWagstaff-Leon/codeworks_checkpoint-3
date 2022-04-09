@@ -1,49 +1,49 @@
 # **LAYOUT**
 
-* [x] Models
-  * [x] TaskModel
+* [o] Models
+  * [o] TaskModel
     * [o] .id (string)
     * [o] .name (string)
     * [o] .checked (bool)
     * [o] .listId (string)
     * [x] get Template (function)
-  * [x] ListModel
+  * [o] ListModel
     * [o] .id (string)
     * [o] .name (string)
     * [o] .color (string)
-    * [x] get Template (function)
-* [x] Services
-  * [x] TasksService
-  * [x] ListsService
-* [x] Controllers
-  * [x] ListsController
-    * [x] .createList (function)
-    * [x] .deleteList (function)
-    * [x] .createTask (function)
-    * [x] .deleteTask (function)
-    * [x] ._drawLists (function)
-    * [x] ._drawTasks (function)
+    * [o] get Template (function)
+* [o] Services
+  * [o] TasksService
+  * [o] ListsService
+* [o] Controllers
+  * [o] ListsController
+    * [o] .createList (function)
+    * [o] .deleteList (function)
+    * [o] .createTask (function)
+    * [o] .deleteTask (function)
+    * [o] ._drawLists (function)
+    * [o] ._drawTasks (function)
     * [o] ._loadState (function)
     * [o] ._saveState (function)
+    * [o] toggleTask (function)
 * [x] HTML
-  * [x] header
-    * [x] Title text
+  * [o] header
+    * [o] Title text
   * [x] main
-    * [x] New list form
-      * [x] Name input
-      * [x] color input
-      * [x] create button
-    * [x] Lists list (id will be lists)
-      * [x] List header
-        * [x] List name
-        * [x] Done tasks count
-      * [x] Tasks list (id will be listId + "-tasks")
-        * [x] task templates
-        * [x] **(scrollable)**
-      * [x] New task form
-        * [x] Name input
-        * [x] create button
+    * [o] New list form
+      * [o] Name input
+      * [o] color input
+      * [o] create button
+    * [o] Lists list (id will be lists)
+      * [o] List header
+        * [o] List name
+        * [o] Done tasks count
+      * [o] Tasks list (id will be listId + "-tasks")
+        * [o] task templates
+        * [o] **(scrollable)**
+      * [o] New task form
+        * [o] Name input
+        * [o] create button
     * [x] delete modals
 
     TODO add delete modals
-    TODO add checking and unchecking function
