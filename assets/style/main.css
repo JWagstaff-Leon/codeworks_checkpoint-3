@@ -14112,6 +14112,7 @@ input[type=color] {
 .lists-container {
   overflow-x: scroll;
   scrollbar-color: #a5a7b2 transparent;
+  max-width: 100vw;
 }
 
 .lists-container::-webkit-scrollbar {

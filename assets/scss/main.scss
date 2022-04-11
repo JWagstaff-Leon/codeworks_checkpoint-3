@@ -30,6 +30,7 @@ input[type="color"]
 {
     overflow-x: scroll;
     scrollbar-color: rgb(165, 167, 178) transparent;
+    max-width: 100vw;
 }
 .lists-container::-webkit-scrollbar
 {
