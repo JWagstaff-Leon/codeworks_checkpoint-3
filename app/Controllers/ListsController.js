@@ -171,7 +171,7 @@ export class ListsController
         }
         catch(error)
         {
-            console.log("[TOGGLE TASK ERROR]", error.message);
+            console.error("[TOGGLE TASK ERROR]", error.message);
         }
     }
 }
