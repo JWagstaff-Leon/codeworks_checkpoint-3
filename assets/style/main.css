@@ -14135,4 +14135,10 @@ input[type=color] {
   text-overflow: ellipsis;
 }
 
+@media only screen and (max-width: 992px) {
+  #lists > div > div {
+    width: 80vw;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

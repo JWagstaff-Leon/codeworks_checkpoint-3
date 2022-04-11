@@ -32,6 +32,7 @@ input[type="color"]
     scrollbar-color: rgb(165, 167, 178) transparent;
     max-width: 100vw;
 }
+
 .lists-container::-webkit-scrollbar
 {
     color: rgb(165, 167, 178);
@@ -54,4 +55,12 @@ input[type="color"]
 #lists [id$="-tasks"] span
 {
     text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 992px)
+{
+    #lists>div>div
+    {
+        width: 80vw;
+    }
 }
