@@ -20,8 +20,8 @@ export class List
     {
         const tasks = ProxyState.tasks.filter(task => task.listId === this.id).length;
         const tasksDone = ProxyState.tasks.filter(task => task.listId === this.id && task.checked).length;
+        
         let tasksBackgroundColor = "#FFFFFF"
-        console.log(this.name, ",", rgbToHsl(this.color).lightness)
         if(rgbToHsl(this.color).lightness >= 192)
         {
             tasksBackgroundColor = "#606060";
