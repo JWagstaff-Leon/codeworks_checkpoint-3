@@ -11,6 +11,10 @@ class ListsService
 
     deleteListById(id)
     {
+        if(id === ProxyState.lastListInputId)
+        {
+            ProxyState.lastListInputId = null;
+        }
         ProxyState.lists = ProxyState.lists.filter(list => list.id != id);
     }
 
