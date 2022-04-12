@@ -3,7 +3,6 @@ import { List } from "../Models/List.js";
 import { Task } from "../Models/Task.js";
 import { listsService } from "../Services/ListsService.js";
 import { tasksService } from "../Services/TasksService.js";
-import { Pop } from "../Utils/Pop.js";
 
 function _loadState()
 {
@@ -30,6 +29,11 @@ function _drawLists()
     ProxyState.lists.forEach(list => listsTemplate += list.Template);
 
     document.getElementById("lists").innerHTML = listsTemplate;
+
+    if(ProxyState.lastListInputId && document.getElementById(ProxyState.lastListInputId))
+    {
+        document.getElementById(ProxyState.lastListInputId).getElementsByTagName("input")[0].focus();
+    }
 }
 
 function _drawTasks()
@@ -130,6 +134,7 @@ export class ListsController
                 listId
             };
 
+            listsService.setLastInput(listId);
             tasksService.createTask(newTaskData);
             form.reset();
         }

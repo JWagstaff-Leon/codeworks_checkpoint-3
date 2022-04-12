@@ -13,6 +13,11 @@ class ListsService
     {
         ProxyState.lists = ProxyState.lists.filter(list => list.id != id);
     }
+
+    setLastInput(listId)
+    {
+        ProxyState.lastListInputId = listId;
+    }
 }
 
 export const listsService = new ListsService();

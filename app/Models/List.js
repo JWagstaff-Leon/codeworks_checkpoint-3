@@ -48,7 +48,7 @@ export class List
 
         return `
             <div class="px-5 rounded">
-                <div class="rounded d-flex flex-column ${titleColor}" style="position: relative">
+                <div class="rounded d-flex flex-column ${titleColor}" style="position: relative" id="${this.id}">
                     <i class="mdi mdi-delete-forever text-danger on-hover action mdi-24px" style="position: absolute; right: 5px; top: 0px" title="Delete List" onclick="app.listsController.deleteList('${this.id}')"></i>
                     <div class="rounded-top d-flex align-items-center justify-content-center flex-column" style="background-color: ${this.color}; height: 20%;">
                         <h2>${this.name}</h2>
