@@ -14139,6 +14139,11 @@ input[type=color] {
   #lists > div > div {
     width: 80vw;
   }
+
+  .on-hover {
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
