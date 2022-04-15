@@ -7,6 +7,7 @@ class TasksService
     {
         const newTask = new Task(newTaskData);
         ProxyState.tasks = [...ProxyState.tasks, newTask];
+        ProxyState.lastListInputId = null;
     }
 
     deleteTaskById(taskId)
